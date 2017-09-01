@@ -1,0 +1,13 @@
+<template name="tp-audio">
+  <view class="audio" data-key="{{key}}" bindtap="playAndStop">
+      <view class="au-icon">
+        <view class="{{audio.playing?'action-stop':'action-play'}}"></view>
+      </view>
+      <view class="au-progress">
+        <view class="au-prgress-move" data-key="{{key}}" style="width:{{ audio.duration==0? 0: (audio.time/audio.duration) * 300 }}px;">
+          <view class='au-cursor' data-key="{{key}}" catchtouchstart='touchStart' catchtouchmove='touchMove' catchtouchend='touchEnd'>
+          </view>
+        </view>
+      </view>
+  </view>
+</template>

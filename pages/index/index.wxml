@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<import src="audio.wxml" />
+
+<view class="container">
+    <scroll-view class="scroll" scroll-y>
+        <view class="page">
+            <view class="slider">
+                <view class="title">
+                  <text>I am 标题</text>
+                </view>
+                <view class="content">
+                  <rich-text nodes="{{nodes}}"></rich-text>
+                </view>
+            </view>
+            <template is="tp-audio" data="{{key:'key1', audio:audios.key1}}" />
+        </view>
+        <view class="page">
+            <view class="slider">
+            </view>
+            <template is="tp-audio" data="{{key:'key2', audio:audios.key2}}" />
+        </view>
+    </scroll-view>
+
+    <!-- <view class="audio" data-key="key2" bindtap="playAndStop">
+    <view class="au-icon"  data-key="key2">
+      <view class="{{audios.key2.playing?'action-stop':'action-play'}}"></view>
+    </view>
+    <view class="au-progress">
+       <view class="au-prgress-move" data-key="key2" style="width:{{ audios.key2.duration==0? 0: (audios.key2.time/audios.key2.duration) * 300 }}px;">
+       <view class='au-cursor' data-key="key2" catchtouchstart='touchStart' catchtouchmove='touchMove' catchtouchend='touchEnd'></view>
+      </view>
+    </view>
+  </view> -->
+
+
+</view>
