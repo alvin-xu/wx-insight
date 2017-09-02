@@ -7,50 +7,7 @@ const PROGRESS_WIDTH = 300
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    nodes:[{
-      name:'ul',
-      children:[{
-        name:'li',
-        children:[{
-          type:'text',
-          text:"aaaaafdsfdsf你好，发挥地方"
-        }]
-      },{
-          name: 'li',
-          children: [{
-            type: 'text',
-            text: "bbbbbbfdfsdfsf，大佛的身份房贷首付"
-          }]
-        }, {
-          name: 'li',
-          children: [{
-            type: 'text',
-            text: "bbbbbbfdfsdfsf，大佛的身份房贷首付"
-          }]
-      }, {
-        name: 'li',
-        children: [{
-          type: 'text',
-          text: "bbbbbbfdfsdfsf，大佛的身份房贷首付"
-        }]
-        }, {
-          name: 'li',
-          children: [{
-            type: 'text',
-            text: "bbbbbbfdfsdfsf，大佛的身份房贷首付fffff"
-          }]
-      }, {
-        name: 'li',
-        children: [{
-          type: 'text',
-          text: "bbbbbbfdfsdfsf，大佛的身份房贷首付"
-        }]
-      }
-      ]
-    }
-    ],
+    userInfo: {},   
 
     touchStartX: 0,
     touchStartTime: 0,
@@ -69,7 +26,54 @@ Page({
         duration: 0,
         time: 0
       }
+    },
+    sliders: [{
+      key: "key1",
+      title: "治标和治本",
+      content: [{
+        name: 'ul',
+        children: [{
+          name: 'li',
+          children: [{
+            type: 'text',
+            text: "生命被困住的时候，哪里是自己的出口？"
+          }]
+        }, {
+          name: 'li',
+          children: [{
+            type: 'text',
+            text: "自己的行为，外在状况的改变？"
+          }]
+        }, {
+          name: 'li',
+          children: [{
+            type: 'text',
+            text: "反思到生命的最深层次"
+          }]
+        }]
+      }
+      ]
+    }, {
+      key: "key2",
+      title: "思考两个问题",
+      content: [{
+        name: 'ul',
+        children: [{
+          name: 'li',
+          children: [{
+            type: 'text',
+            text: "1，为什么道理都懂，却就是做不到？"
+          }]
+        }, {
+          name: 'li',
+          children: [{
+            type: 'text',
+            text: "2，为什么我常常觉得自己缺钱，缺时间？"
+          }]
+        }]
+      }]
     }
+    ]
   },
   getAudio(key) {
     return this.data.audios[key]
